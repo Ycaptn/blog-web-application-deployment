@@ -1,0 +1,29 @@
+name: Deploy to EC2
+
+on:
+  pull:
+    branches:
+      - main
+
+# jobs:
+#   deploy:
+#     if: github.actor == 'Ycaptn' 
+#     runs-on: ubuntu-latest
+#     steps:
+#     - name: Set up SSH key
+#       uses: webfactory/ssh-agent@v0.5.3
+#       with:
+#         private-key: ${{ secrets.PRIVATE_KEY }}
+
+#     - name: Deploy to EC2
+#       run: |
+#         # SSH into the EC2 instance and run each script individually
+#         ssh -o StrictHostKeyChecking=no -i ${{ secrets.PRIVATE_KEY }} ${{ secrets.USER }}@${{ secrets.EC2_IP }} 'bash -s' << 'ENDSSH'
+#           cd /path/to/your/app/.github/workflows  
+#           bash deploy.sh
+#         ENDSSH
+
+#         # secrets.PRIVATE_KEY
+#         # secrets.EC2_IP
+#         # secrets.USER
+#         # ec2-user
