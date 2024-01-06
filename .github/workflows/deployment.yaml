@@ -1,9 +1,9 @@
-name: Deploy to EC2
+# name: Deploy to EC2
 
-on:
-  pull:
-    branches:
-      - main
+# on:
+#   pull:
+#     branches:
+#       - main
 
 # jobs:
 #   deploy:
@@ -19,11 +19,11 @@ on:
 #       run: |
 #         # SSH into the EC2 instance and run each script individually
 #         ssh -o StrictHostKeyChecking=no -i ${{ secrets.PRIVATE_KEY }} ${{ secrets.USER }}@${{ secrets.EC2_IP }} 'bash -s' << 'ENDSSH'
-#           cd /path/to/your/app/.github/workflows  
+#           cd /path/to/your/app/.github/workflows/webscript 
 #           bash deploy.sh
 #         ENDSSH
 
-#         # secrets.PRIVATE_KEY
-#         # secrets.EC2_IP
-#         # secrets.USER
-#         # ec2-user
+# #         # secrets.PRIVATE_KEY
+# #         # secrets.EC2_IP
+# #         # secrets.USER
+# #         # ec2-user
