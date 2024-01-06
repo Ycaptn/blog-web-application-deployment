@@ -23,7 +23,8 @@ jobs:
          python -m pip install --upgrade pip
          python -m venv venv
          source venv/bin/activate
-         pip install pytest
+         python -c "pip --version"
+         pip3 install pytest
       - name: Test with pytest
         run: pytest jmilkfansblog/tests/test_urls.py --doctest-modules --junitxml=junit/test-results-${{ matrix.python-version }}.xml
       - name: Upload pytest test results
