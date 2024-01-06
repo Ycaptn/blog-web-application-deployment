@@ -24,7 +24,7 @@ jobs:
          python -m venv venv
          source venv/bin/activate
          pip3 install -r requirements.txt
-         pip3 install  pytest
+         pip3 install --upgrade pytest
          pytest jmilkfansblog/tests/test_urls.py --doctest-modules --junitxml=junit/test-results-${{ matrix.python-version }}.xml
       - name: Upload pytest test results
         uses: actions/upload-artifact@v3
