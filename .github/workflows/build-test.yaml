@@ -1,6 +1,6 @@
 name: Build
 
-on: [push]
+on: [pull_request]
 
 jobs:
   build:
@@ -25,7 +25,7 @@ jobs:
          source venv/bin/activate
          pip install -r requirements.txt
          pip install --upgrade pytest
-         pytest jmilkfansblog/tests/test_urls.py --doctest-modules --junitxml=junit/test-results-${{ matrix.python-version }}.xml
+         pytest jmilkfansblog/tests/test_urls.py
       - name: Upload pytest test results
         uses: actions/upload-artifact@v3
         with:
