@@ -45,3 +45,9 @@ git commit -m "Update application to version X"
 git push origin $branch_or_tag
 
 echo "Update complete!"
+
+
+        # secrets.PRIVATE_KEY
+        # secrets.EC2_IP
+        # secrets.USER
+        # ec2-user
