@@ -40,7 +40,7 @@ i18n==0.2
 iso8601==0.1.11
 itsdangerous==0.24
 Jinja2==2.8
-jsmin==2.2.1
+jsmin==2.2.6
 kombu==4.0.1
 logutils==0.3.3
 Mako==1.0.6
