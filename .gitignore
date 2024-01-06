@@ -3,6 +3,5 @@ blog_env/
 .ropeproject/
 .eggs/
 .coverage
-./github/workflows/webscript/
-./github/deployment.yaml
+
 
