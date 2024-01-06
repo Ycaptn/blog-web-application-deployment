@@ -1,4 +1,4 @@
-name: Build
+name: Build-test
 
 on: [push]
 
@@ -17,20 +17,13 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
-      - name: Install dependencies
+      - name: Install dependencies and test app
         run: |
          sudo apt update
          python -m pip install pip==23.3.2
-         python -m venv venv
-         source venv/bin/activate
          pip install -r requirements.txt
          pip install --upgrade pytest
          pytest jmilkfansblog/tests/test_urls.py
-      - name: Upload pytest test results
-        uses: actions/upload-artifact@v3
-        with:
-          name: pytest-results-${{ matrix.python-version }}
-          path: junit/test-results-${{ matrix.python-version }}.xml
-        if: ${{ always() }}
+      
       
       
